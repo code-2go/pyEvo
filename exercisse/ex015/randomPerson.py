@@ -1,4 +1,4 @@
-# A professor need find one random student through a lottery.
+# A teacher wants to find a random student through lottery.
 
 import random
 
