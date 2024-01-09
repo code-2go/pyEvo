@@ -11,7 +11,8 @@ elif deltaT == 3:
 elif deltaT == 4:
     time = int(input('Enter a number of mounths needed to finalize the loan: '))
 payment = (object/time)
-if payment < salary*1.3:
+if payment <= salary*1.3:
     print('Loan approved. Payment per mounth cost ${:.2f}'.format(payment))
 else:
     print('Loan recused! You minimun loan period is {} mounths'.format(ceil(object/(salary*1.3))))
+    
