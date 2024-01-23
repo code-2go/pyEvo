@@ -6,7 +6,7 @@ cnt = 1
 sum = 0
 average = 0
 while option != 2:
-    name = str(input('Name: '))
+    name = str(input('Name: ')).strip()
     age = int(input('Age: '))
     gender = str(input('Gender: ')).strip().lower()
     if gender == str('male'):

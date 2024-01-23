@@ -9,3 +9,4 @@ print('Is lower?',n.islower())
 print('Is upper case?',n.isupper())
 print('Is printable?',n.isprintable())
 print('Is N capitalized?',n.istitle())
+ 
