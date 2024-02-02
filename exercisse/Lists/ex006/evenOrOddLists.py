@@ -8,9 +8,13 @@ while True:
         break
 for cnt in nList:
     if cnt % 2 == 0:
+        if cnt in evenList:
+            evenList.remove(cnt)
         evenList.append(cnt)
-    elif cnt % 2 == 1:
+    if cnt % 2 == 1:
+        if cnt in oddList:
+            oddList.remove(cnt)
         oddList.append(cnt)
-print(f'The complet list is {nList}\n')
-print(f'The even list is {sorted(evenList)}\n')
+print(f'The complet list is {nList}')
+print(f'The even list is {sorted(evenList)}')
 print(f'The odd list is {sorted(oddList)}')
