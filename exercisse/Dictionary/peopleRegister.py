@@ -9,8 +9,6 @@ d - a list of all people over the average age'''
 
 data = {}
 bigdata = []
-women = []
-overAge = []
 sumAge = 0
 while True:
     data['name'] = str(input('Enter the name: ').title().strip())
@@ -40,25 +38,18 @@ while True:
 for cnt in range(0, len(bigdata)):
     sumAge += bigdata[cnt]['age']
     average = sumAge/len(bigdata)
-    if bigdata[cnt]['gender'] == 'F':
-        women.append(bigdata[cnt])
-for cnt in range(0, len(bigdata)):
-    if bigdata[cnt]['age'] > average:
-            overAge.append(bigdata[cnt])
 print()
 print('Data info:'.center(55))
 print('-'*55)
 print(f'There are {len(bigdata)} people registered') 
 print(f'\nThe average age of all the people registered is {average:.2f} years.')        
 print('\nThe list of all registered women:')
-for cnt in women:
-    for k, v in cnt.items():
-        print(f' The {k} is {v}', end= '.')
-    print()
+for data in bigdata:
+    if data['gender'] == 'F':
+        print(f' Name: {data['name']}, age: {data['age']}')
 print('\nThe list of all over the average age people:')
-for cnt in overAge:
-    for k, v in cnt.items():
-        print(f' The {k} is {v}', end= '.')
-    print()
-
-        
+for data in bigdata:
+    if data['age'] > average:
+        for key, value in data.items():
+            print(f' {key}: {value}', end=';')
+        print()
