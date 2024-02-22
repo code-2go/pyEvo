@@ -47,8 +47,11 @@ while True:
             break
         if check == 1:
             detail = int(input('\nEnter the player (No) to data: '))
-            for cnt in range(0, len(bigdata[detail-1]['goals'])):
-                print(f' - In the {cnt+1}o  match, {bigdata[detail-1]['name']} scored {bigdata[detail-1]['goals'][cnt]} goals')
+            if detail < 1 or detail > (len(bigdata)):
+                print(f'There isn\'t player No {detail}')
+            else:
+                for cnt in range(0, len(bigdata[detail-1]['goals'])):
+                    print(f' - In the {cnt+1}o  match, {bigdata[detail-1]['name']} scored {bigdata[detail-1]['goals'][cnt]} goals')
         if check == 2:
             print('\nThank You')
             break
