@@ -8,5 +8,5 @@ def head(msg):
     print('-' * len(msg))
 
 
-message = str(input('Text space - ').title().strip())
-head(message)
+# message = str(input('Text space - ').title().strip())
+head(str(input('Text space - ').title().strip()))

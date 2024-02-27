@@ -7,29 +7,26 @@ from time import sleep
 
 
 def count_up():
-    sleep(1)
     for counter in range(1, 10 + 1):
-        print(counter, end=' ')
-        sleep(.1)
+        print(counter, end=' ', flush=True)
+        sleep(.2)
     print('End.')
 
 
 def count_down():
-    sleep(1)
     for counter in range(10, 0, -1):
-        print(counter, end=' ')
-        sleep(.1)
+        print(counter, end=' ', flush=True)
+        sleep(.2)
     print('End.')
 
 
 def custom():
-    sleep(1)
     start = int(input('Enter an integer to start your count: '))
     end = int(input('Enter an integer to stop your count: '))
     counting_pass = int(input('Enter an integer number, positive or negative, for the pass counter: '))
     for counter in range(start, end + counting_pass, counting_pass):
-        print(counter, end=' ')
-        sleep(.1)
+        print(counter, end=' ', flush=True)
+        sleep(.2)
     print('End.')
 
 
