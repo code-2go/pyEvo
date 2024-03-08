@@ -7,7 +7,6 @@ from math import factorial
 # print(n)
 
 # other method
-
 num = int(input('Enter an integer: '))
 n = num
 for cnt in range(num, 2, -1):
