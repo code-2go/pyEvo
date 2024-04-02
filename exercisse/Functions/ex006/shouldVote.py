@@ -3,20 +3,15 @@
 
 
 def check(n):
+    from datetime import date
     age = (date.today().year) - n
     if age >= 18 and age < 65:
-        return 'yes'
+        return 'You are eligible to vote'
     elif age < 18:
-        return 'no'
+        return 'Sorry, you aren\'t eligible to vote'
     elif age >= 65:
-        return 'optional'
+        return 'Your vote is optional'
 
 
-from datetime import date
 year = int(input('For check your voting situation, please enter your birth year: '))
-if check(year) == 'yes':
-    print('You are eligible to vote')
-elif check(year) == 'no':
-    print('Sorry, you aren\'t eligible to vote')
-elif check(year) == 'optional':
-    print('Your vote is optional')
+print(check(year))
