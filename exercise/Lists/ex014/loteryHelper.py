@@ -23,13 +23,13 @@ data = []
 play = 1
 nSim = int(input('How many lottery simulation for the draw? ')) 
 while play <= nSim:
-    for cnt in range(0, 6):
-        n = randint(1, 60+1)
+    for cnt in range(0, 15):
+        n = randint(1, 25)
         if n not in data:
             data.append(n)
         else:
             while n in data:
-                n = randint(1, 60+1)
+                n = randint(1, 25)
             data.append(n)
     data.sort()
     sim.append(data[:])
